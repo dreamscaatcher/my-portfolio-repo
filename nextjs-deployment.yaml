@@ -2,19 +2,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nextjs-app
+  namespace: new-namespace
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
-      app: nextjs-app
+      app: portfolio
   template:
     metadata:
       labels:
-        app: nextjs-app
+        app: portfolio
     spec:
       containers:
-      - name: nextjs-app
-        image: localhost/nextjs-app:latest
-        imagePullPolicy: Never
+      - name: portfolio
+        image: gcr.io/guri-sat13-07/portfolio
         ports:
         - containerPort: 3000
