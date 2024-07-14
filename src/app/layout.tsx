@@ -62,15 +62,7 @@ export const metadata: Metadata = {
   ],
   creator: "Taqui imam",
 
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: siteConfig.url,
-    title: siteConfig.name,
-    description: siteConfig.description,
-    images: [`${siteConfig.url}/og-image.png`],
-    siteName: siteConfig.name,
-  },
+  
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
